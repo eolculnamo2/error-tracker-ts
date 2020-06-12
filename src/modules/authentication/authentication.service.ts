@@ -22,6 +22,7 @@ interface IAuthenticationService {
 @Injectable()
 export default class AuthenticationService implements IAuthenticationService {
   private readonly SALT_ROUNDS: number = 10;
+  private readonly MOVE_ME_TO_ENV: string = 'move_this_to_env!!!!';
 
   constructor(
     @InjectModel(User.name) private userModel: Model<User>, 
@@ -60,6 +61,22 @@ export default class AuthenticationService implements IAuthenticationService {
       const encryptedPw = await bcrypt.hash(password, this.SALT_ROUNDS);
       return encryptedPw;
     } catch(e) {
+      throw e;
+    }
+  }
+
+  generateJwt(email: string, organization: string): string {
+    const rawToken =  jwt.sign({
+      email,
+      organization,
+    }, this.MOVE_ME_TO_ENV, { expiresIn: '1h' });
+    return this.encryptionService.encrypt(rawToken);
+  }
+
+  private async readJwt(token: string): Promise<string> {
+    try {
+      return await jwt.verify(this.encryptionService.decrypt(token), this.MOVE_ME_TO_ENV);
+    } catch (e) {
       throw e;
     }
   }

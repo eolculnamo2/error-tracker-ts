@@ -21,11 +21,11 @@ export default class EncryptionService implements IEncryptionService {
 
   encrypt (plainText: string): string {
     this.cipher.update(plainText, 'utf8', 'base64');
-    return this.decrypt(this.cipher.final('base64'));
+    return this.cipher.final('base64');
   }
 
   decrypt (encrypedText: string): string {
-   this.decipher.update(encrypedText, 'base64', 'utf8')
-  return this.decipher.final('utf8');
+    this.decipher.update(encrypedText, 'base64', 'utf8')
+    return this.decipher.final('utf8');
   }
 }
