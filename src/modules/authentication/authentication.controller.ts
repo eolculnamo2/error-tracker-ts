@@ -3,6 +3,7 @@ import AuthenticationService from "./authentication.service";
 import RegistrationDto from "src/dto/RegistrationDto";
 import LoginDto from "src/dto/LoginDto";
 import { SetCookies } from '@nestjsplus/cookies';
+import AuthConstants from "src/constants/auth-constants";
 
 @Controller("/auth")
 export default class AuthenticationController {
@@ -19,7 +20,7 @@ export default class AuthenticationController {
     const cookie1Value = this.authenticationService.generateJwt(loginDto.email, 'organization');
     req._cookies = [
       {
-        name: 'errors_auth_cookie',
+        name: AuthConstants.AUTH_COOKIE,
         value: cookie1Value,
         options: {
           signed: true,
