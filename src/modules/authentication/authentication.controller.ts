@@ -9,11 +9,11 @@ export default class AuthenticationController {
 
   @Post("/register")
   async createUser(@Body() registrationDto: RegistrationDto) {
-    return await this.authenticationService.encryptPassword(registrationDto.password);
+    return await this.authenticationService.registerNewUser(registrationDto);
   }
 
   @Post("/login")
   login(@Body() loginDto: LoginDto) {
-    return this.authenticationService.handleLogin();
+    return this.authenticationService.handleLogin(loginDto);
   }
 }
