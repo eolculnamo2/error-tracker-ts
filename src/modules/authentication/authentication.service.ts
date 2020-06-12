@@ -17,6 +17,7 @@ interface IAuthenticationService {
   encryptPassword: (password: string) => Promise<string>;
   handleLogin: (loginDto: LoginDto) => Promise<User>;
   confirmPassword: (passwordAttempt: string, encryptedPw: string) => Promise<boolean>;
+  generateJwt: (email: string, organization: string) => string;
 }
 
 @Injectable()
