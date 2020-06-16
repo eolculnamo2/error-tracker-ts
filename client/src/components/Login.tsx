@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import {
   MainSection,
+  LoginHeader,
   SecondarySection,
   LoginBox,
   InputStyling,
@@ -12,6 +13,7 @@ import {
 const Login = () => {
   return (
     <MainSection>
+      {/* <LoginHeader>CREATE HEADER HERE</LoginHeader> */}
       <SecondarySection>
         <LoginBox>
           <InputStyling>

@@ -8,8 +8,7 @@ const Universal = createGlobalStyle`
     padding: 0;
     box-sizing: none;
     margin: 0;
-    // padding: .5rem;
-    background-color: white;
+    background-color: #999;
   }
 `;
 

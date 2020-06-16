@@ -5,7 +5,13 @@ export const MainSection = styled.div`
   background-color: white;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+`;
+
+export const LoginHeader = styled.div`
+  align-self: flex-start;
+  width: 100vh;
 `;
 
 export const SecondarySection = styled.div`
@@ -22,6 +28,10 @@ export const LoginBox = styled.div`
   justify-content: center;
   flex-direction: column;
   border: 1px solid #999;
+
+  i {
+    font-size: 0.9rem;
+  }
 `;
 
 export const InputStyling = styled.div`
@@ -32,16 +42,17 @@ export const InputStyling = styled.div`
     outline: none;
     border: none;
     height: 1.3rem;
-    width: 16rem;
     font-size: 0.8rem;
-    placeholder: {
-      padding-left: 1rem;
+    ::placeholder {
+      padding-left: 0.1rem;
     }
   }
 `;
 
 export const InputDiv = styled.div`
   border: 0.01rem solid #999;
+  padding: 0.2rem;
+  width: 18rem;
 `;
 
 export const LoginBtnsDiv = styled.div`
