@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MainSection = styled.div`
   height: 100vh;
-  background-color: white;
+  background-color: #999;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -27,7 +27,7 @@ export const LoginBox = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 1px solid #999;
+  border: 0.2rem solid black;
 
   i {
     font-size: 0.9rem;

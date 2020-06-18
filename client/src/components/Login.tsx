@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   MainSection,
   LoginHeader,
@@ -18,14 +18,14 @@ const Login = () => {
         <LoginBox>
           <InputStyling>
             <InputDiv>
-              {" "}
-              <i className="fa fa-user" aria-hidden="true"></i>
+              <FontAwesomeIcon icon="user-alt" />
+
               <input type="text" placeholder="Email Address" />
             </InputDiv>
           </InputStyling>
           <InputStyling>
             <InputDiv>
-              <i className="fa fa-key" aria-hidden="true"></i>
+              <FontAwesomeIcon icon="key" />
               <input type="password" placeholder="Password" />
             </InputDiv>
           </InputStyling>
