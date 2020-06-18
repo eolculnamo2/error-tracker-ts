@@ -5,7 +5,10 @@ import {
   LoginHeader,
   SecondarySection,
   LoginBox,
+  LoginBtnnsSpacer1,
+  LoginBtnnsSpacer2,
   InputStyling,
+  IconStyling,
   LoginBtnsDiv,
   InputDiv,
 } from "../styling/LoginStyling";
@@ -18,20 +21,27 @@ const Login = () => {
         <LoginBox>
           <InputStyling>
             <InputDiv>
-              <FontAwesomeIcon icon="user-alt" />
-
+              <IconStyling>
+                <FontAwesomeIcon icon="user-alt" />
+              </IconStyling>
               <input type="text" placeholder="Email Address" />
             </InputDiv>
           </InputStyling>
           <InputStyling>
             <InputDiv>
-              <FontAwesomeIcon icon="key" />
+              <IconStyling>
+                <FontAwesomeIcon icon="key" />
+              </IconStyling>
               <input type="password" placeholder="Password" />
             </InputDiv>
           </InputStyling>
           <LoginBtnsDiv>
-            <button>Sign In</button>
-            <button>New Organization</button>
+            <LoginBtnnsSpacer1>
+              <button>Sign In</button>
+            </LoginBtnnsSpacer1>
+            <LoginBtnnsSpacer2>
+              <button>New Organization</button>
+            </LoginBtnnsSpacer2>
           </LoginBtnsDiv>
         </LoginBox>
       </SecondarySection>

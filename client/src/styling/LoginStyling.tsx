@@ -1,11 +1,8 @@
 import styled from "styled-components";
 
 export const MainSection = styled.div`
-  height: 100vh;
+  margin-top: 15rem; //not perfectly centered when working with different resolutions
   background-color: #999;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   align-items: center;
 `;
 
@@ -43,10 +40,12 @@ export const InputStyling = styled.div`
     border: none;
     height: 1.3rem;
     font-size: 0.8rem;
-    ::placeholder {
-      padding-left: 0.1rem;
-    }
   }
+`;
+
+export const IconStyling = styled.span`
+  font-size: 0.8em;
+  padding-right: 0.2rem;
 `;
 
 export const InputDiv = styled.div`
@@ -62,10 +61,18 @@ export const LoginBtnsDiv = styled.div`
 
   button {
     font-size: 0.8rem;
-    width: 9rem;
+    width: 8rem;
     background-color: transparent;
     outline: none;
     border: none;
     cursor: pointer;
   }
+`;
+
+export const LoginBtnnsSpacer1 = styled.span`
+  padding-right: 1rem;
+`;
+
+export const LoginBtnnsSpacer2 = styled.span`
+  padding-left: 1rem;
 `;
