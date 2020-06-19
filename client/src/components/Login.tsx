@@ -1,5 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { NavLink } from "react-router-dom";
 import {
   MainSection,
   LoginHeader,
@@ -37,10 +38,10 @@ const Login = () => {
           </InputStyling>
           <LoginBtnsDiv>
             <LoginBtnnsSpacer1>
-              <button>Sign In</button>
+              <NavLink to="/dashboard">Sign In</NavLink>
             </LoginBtnnsSpacer1>
             <LoginBtnnsSpacer2>
-              <button>New Organization</button>
+              <NavLink to="/neworganization">New Organization</NavLink>
             </LoginBtnnsSpacer2>
           </LoginBtnsDiv>
         </LoginBox>
