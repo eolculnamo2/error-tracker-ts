@@ -6,11 +6,6 @@ export const MainSection = styled.div`
   align-items: center;
 `;
 
-export const LoginHeader = styled.div`
-  align-self: flex-start;
-  width: 100vh;
-`;
-
 export const SecondarySection = styled.div`
   display: flex;
   justify-content: center;
@@ -72,7 +67,10 @@ export const LoginBtnsDiv = styled.div`
   a {
     text-decoration: none;
     color: black;
-    border-bottom: 0.2px solid #d0d0d0;
+
+    :hover {
+      color: green;
+    }
   }
 `;
 

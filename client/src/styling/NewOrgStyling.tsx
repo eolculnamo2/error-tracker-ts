@@ -75,7 +75,11 @@ export const LoginBtnnsSpacer1 = styled.span`
   a {
     text-decoration: none;
     color: black;
-    border-bottom: 0.2px solid #d0d0d0;
+    // border-bottom: 0.2px solid #d0d0d0;
+
+    :hover {
+      color: green;
+    }
   }
 `;
 

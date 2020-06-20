@@ -23,6 +23,7 @@ const Universal = createGlobalStyle`
     box-sizing: none;
     margin: 0;
     background-color: #999;
+    font-family: "Segoe UI";
   }
 `;
 

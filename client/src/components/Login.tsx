@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 import {
   MainSection,
-  LoginHeader,
   SecondarySection,
   LoginBox,
   LoginBtnnsSpacer1,
@@ -15,9 +14,10 @@ import {
 } from "../styling/LoginStyling";
 
 const Login = () => {
+  const [error, setError] = useState<string>("");
+
   return (
     <MainSection>
-      {/* <LoginHeader>CREATE HEADER HERE</LoginHeader> */}
       <SecondarySection>
         <LoginBox>
           <InputStyling>
