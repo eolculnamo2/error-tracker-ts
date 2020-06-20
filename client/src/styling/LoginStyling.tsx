@@ -40,6 +40,7 @@ export const InputStyling = styled.div`
     border: none;
     height: 1.3rem;
     font-size: 0.8rem;
+    width: 16rem;
   }
 `;
 
@@ -66,6 +67,12 @@ export const LoginBtnsDiv = styled.div`
     outline: none;
     border: none;
     cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 0.2px solid #d0d0d0;
   }
 `;
 

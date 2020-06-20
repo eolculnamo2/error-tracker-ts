@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import {
   MainSection,
   SecondarySection,
@@ -42,7 +43,7 @@ const NewOrg = () => {
           </InputStyling>
           <InputStyling>
             <InputDiv>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Enter a password" />
             </InputDiv>
           </InputStyling>
           <InputStyling>
@@ -52,10 +53,11 @@ const NewOrg = () => {
           </InputStyling>
           <LoginBtnsDiv>
             <LoginBtnnsSpacer1>
-              <button>Sign In</button>
+              <NavLink to="/dashboard">Create Organization</NavLink>
             </LoginBtnnsSpacer1>
             <LoginBtnnsSpacer2>
-              <button>New Organization</button>
+              Already have an account?
+              <NavLink to="/">Sign in here</NavLink>
             </LoginBtnnsSpacer2>
           </LoginBtnsDiv>
         </LoginBox>
