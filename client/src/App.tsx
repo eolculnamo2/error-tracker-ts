@@ -24,6 +24,10 @@ const Universal = createGlobalStyle`
     margin: 0;
     background-color: #999;
     font-family: "Segoe UI";
+
+    input {
+      font-family: "Segoe UI";
+    }
   }
 `;
 
