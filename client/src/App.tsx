@@ -1,38 +1,32 @@
-import React from "react";
-import logo from "./logo.svg";
-import styled, { createGlobalStyle } from "styled-components";
+import React, { useReducer } from "react";
+import { createGlobalStyle } from "styled-components";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab, faKeybase, faKeycdn } from "@fortawesome/free-brands-svg-icons";
-import {
-  faCheckSquare,
-  faCoffee,
-  faUserCircle,
-  faUserCheck,
-  faUserAlt,
-  faKey,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Login from "./components/Login";
-import NewOrg from "./components/NewOrg";
-import Dashboard from "./components/Dashboard";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { faUserAlt, faKey } from "@fortawesome/free-solid-svg-icons";
+import Login from "./pages/Login";
+import NewOrg from "./pages/NewOrg";
+import Dashboard from "./pages/Dashboard";
+
+import { StateContext, initialState } from "./context/StateContext";
 
 const Universal = createGlobalStyle`
   body {
     padding: 0;
     box-sizing: none;
     margin: 0;
-    background-color: #999;
+    background-color: white;
     font-family: "Segoe UI";
 
     input {
-      font-family: "Segoe UI";
+      font-family: "Segoe UI"; 
     }
   }
 `;
 
 function App() {
   library.add(fab, faKey, faUserAlt);
+  // const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <Router>
       <Universal />

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const MainSection = styled.div`
-  margin-top: 15rem; //not perfectly centered when working with different resolutions
-  background-color: #999;
+  margin-top: 13rem; //not perfectly centered when working with different resolutions
+  background-color: none;
   align-items: center;
 `;
 
