@@ -24,7 +24,7 @@ export const LoginBox = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 0.2rem solid black;
+  border: 0.1rem solid black;
 
   i {
     font-size: 0.9rem;

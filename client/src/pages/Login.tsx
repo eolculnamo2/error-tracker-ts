@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 import Navbar from "../components/Navbar";
@@ -13,12 +13,17 @@ import {
   LoginBtnsDiv,
   InputDiv,
 } from "../styling/LoginStyling";
+import { StateContext } from "../context/StateContext";
 
 const Login = () => {
+  const { state, dispatch } = useContext(StateContext);
+
+  // const { email } = state;
   const [error, setError] = useState<string>("");
 
   return (
     <div>
+      {/* {email}  */}
       <Navbar />
       <MainSection>
         <SecondarySection>
