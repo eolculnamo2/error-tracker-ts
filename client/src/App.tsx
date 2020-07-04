@@ -7,8 +7,7 @@ import { faUserAlt, faKey } from "@fortawesome/free-solid-svg-icons";
 import Login from "./pages/Login";
 import NewOrg from "./pages/NewOrg";
 import Dashboard from "./pages/Dashboard";
-
-// import { StateContext, initialState, reducer } from "./context/StateContext";
+import { StateContext, initialState, reducer } from "./context/StateContext";
 
 const Universal = createGlobalStyle`
   body {
@@ -26,10 +25,10 @@ const Universal = createGlobalStyle`
 
 function App() {
   library.add(fab, faKey, faUserAlt);
-  // const [state, dispatch] = useReducer<any>(initialState, reducer);
+  const [state, dispatch] = useReducer<any>(initialState, reducer);
 
   return (
-    // <StateContext.Provider value={{ state, dispatch }}>
+    <StateContext.Provider value={{ state, dispatch }}>
     <Router>
       <Universal />
       <Switch>
@@ -38,7 +37,7 @@ function App() {
         <Route exact path="/dashboard" component={Dashboard} />
       </Switch>
     </Router>
-    // </StateContext.Provider>
+    </StateContext.Provider>
   );
 }
 
