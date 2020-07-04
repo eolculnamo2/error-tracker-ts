@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const MainSection = styled.div`
-  margin-top: 8rem; //not perfectly centered when working with different resolutions
-  background-color: #999;
+  margin-top: 6rem; //not perfectly centered when working with different resolutions
+  background-color: none;
   align-items: center;
 `;
 
@@ -24,7 +24,7 @@ export const LoginBox = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 0.2rem solid black;
+  border: 0.1rem solid black;
 
   i {
     font-size: 0.9rem;
